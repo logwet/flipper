@@ -16,7 +16,7 @@ public abstract class TemplateStructurePieceMixin extends StructurePieceMixin {
     public void flipper$setFlip(Flip flip) {
         super.flipper$setFlip(flip);
 
-        ((StructureContainerPatch) this.placeSettings).flipper$setGlobalBoundingBox(boundingBox);
+        ((StructureContainerPatch) this.placeSettings).flipper$setFlip(flip);
     }
 
     @Override

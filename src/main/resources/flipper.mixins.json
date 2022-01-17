@@ -4,6 +4,7 @@
   "package": "me.logwet.flipper.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "common.StructurePieceMixin",
     "common.StructureTemplateMixin",
     "common.patch.block.BellBlockMixin",
     "common.patch.block.BlockStateBaseMixin",

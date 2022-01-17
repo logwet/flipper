@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(StructurePlaceSettings.class)
 public abstract class StructurePlaceSettingsMixin implements StructureContainerPatch {
     @Unique protected BoundingBox globalBoundingBox;
-    @Unique protected Flip flip = Flip.FLIP;
+    @Unique protected Flip flip;
 
     @Override
     public Flip flipper$getFlip() {

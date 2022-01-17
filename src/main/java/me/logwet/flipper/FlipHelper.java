@@ -50,8 +50,9 @@ public class FlipHelper {
             List<StructurePiece> pieces, BoundingBox boundingBox) {
         BoundingBox globalBoundingBox = new BoundingBox(boundingBox);
         for (int i = 0; i < pieces.size(); i++) {
-            ((StructureContainerPatch) pieces.get(i))
-                    .flipper$setGlobalBoundingBox(globalBoundingBox);
+            StructureContainerPatch piecePatch = ((StructureContainerPatch) pieces.get(i));
+            piecePatch.flipper$setFlip(Flip.FLIP);
+            piecePatch.flipper$setGlobalBoundingBox(globalBoundingBox);
         }
     }
 

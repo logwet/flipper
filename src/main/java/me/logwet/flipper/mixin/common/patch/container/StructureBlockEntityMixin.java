@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.Unique;
 @Mixin(StructureBlockEntity.class)
 public abstract class StructureBlockEntityMixin implements StructureContainerPatch {
     @Unique protected BoundingBox globalBoundingBox;
-    @Unique protected Flip flip = Flip.FLIP;
+    @Unique protected Flip flip;
 
     @Override
     public Flip flipper$getFlip() {
