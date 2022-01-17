@@ -1,8 +1,6 @@
 package me.logwet.flipper;
 
-import java.util.List;
 import java.util.Objects;
-import me.logwet.flipper.patch.StructureContainerPatch;
 import me.logwet.flipper.patch.block_state.BlockFlipPatch;
 import me.logwet.flipper.patch.block_state.BlockStateFlipPatch;
 import net.minecraft.core.BlockPos;
@@ -12,7 +10,6 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
-import net.minecraft.world.level.levelgen.structure.StructurePiece;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 
 public class FlipHelper {
@@ -44,16 +41,6 @@ public class FlipHelper {
         }
 
         return blockState;
-    }
-
-    public static void injectBoundingBoxToPieces(
-            List<StructurePiece> pieces, BoundingBox boundingBox) {
-        BoundingBox globalBoundingBox = new BoundingBox(boundingBox);
-        for (int i = 0; i < pieces.size(); i++) {
-            StructureContainerPatch piecePatch = ((StructureContainerPatch) pieces.get(i));
-            piecePatch.flipper$setFlip(Flip.FLIP);
-            piecePatch.flipper$setGlobalBoundingBox(globalBoundingBox);
-        }
     }
 
     public static BlockPos transform(
