@@ -1,5 +1,7 @@
 # Flipper
 
+Flips all structures upside down.
+
 ## Setup
 
 Put the `jar` file in your mods folder with Fabric Loader installed. This mod does not
