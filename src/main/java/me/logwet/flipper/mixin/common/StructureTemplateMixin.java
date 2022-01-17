@@ -1,4 +1,4 @@
-package me.logwet.flipper.mixin.common.patch;
+package me.logwet.flipper.mixin.common;
 
 import java.util.Random;
 import me.logwet.flipper.FlipHelper;
